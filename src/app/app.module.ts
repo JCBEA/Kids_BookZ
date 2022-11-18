@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

@@ -3,23 +3,21 @@
 <body>
 
     <div class="center"> 
-        <h1> Login </h1>
-        <form method="post"></form>
+        <h1>Admin Login</h1>
+        <form #admin="ngForm" (ngSubmit)="adminLogin(admin.value)">
         <div class="txt_field">
-            <input type="text" required> 
+            <input ngModel type="text" name="username" required> 
             <span></span>
             <label> Username </label>
         </div>
         <div class="txt_field">
-            <input type="password" required>   
+            <input ngModel type="password" name="password" required>   
             <span></span>
             <label> Password </label>
         </div>
-     <div class="pass"> Forgot Password? </div>
      <input type="submit" value="Login">
-
+    </form>
      <div class="signup_link">
-        Not a member? <a  routerLink="./signup"> </a>
      </div>
     </div>
 

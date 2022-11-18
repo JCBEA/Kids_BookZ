@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "kidsbook-4d4ed": {
+      "hosting": {
+        "Kids_BZ": [
+          "kidsbook-4d4ed"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "kidsbook-4d4ed"
+  }
+}

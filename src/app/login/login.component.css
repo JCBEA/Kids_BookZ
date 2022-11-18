@@ -11,4 +11,8 @@
     border-radius: 5%;
     height: 50px;
     width: 200px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }

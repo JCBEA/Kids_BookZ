@@ -94,6 +94,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Kids_BZ:build:production",
+            "firebaseProject": "kidsbook-4d4ed",
+            "firebaseHostingSite": "kidsbook-4d4ed"
+          }
         }
       }
     }

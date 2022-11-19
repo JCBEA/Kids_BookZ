@@ -1,0 +1,19 @@
+.header-new{
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    margin: 0px;
+  }
+  .subs{
+    height: 40px;
+  }
+  .dropdown-menu{
+    background-color: lightgrey;
+  }
+  
+  .navbar-right{
+    margin-right: 20px;
+  }
+  .navbar-nav{
+    margin-left: 50px;
+  }

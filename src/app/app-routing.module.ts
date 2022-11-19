@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
+
 
 const routes: Routes = [
-  {path: 'login', component: LoginComponent},
   {path: 'dashboard', component: DashboardComponent},
   {path: 'admin-login', component: AdminLoginComponent},
-  { path: '',redirectTo:'login', pathMatch:'full'}
+  {path: 'admin-page', component: AdminPageComponent},
+  { path: '',redirectTo:'dashboard', pathMatch:'full'}
 ];
 
 @NgModule({
@@ -17,4 +18,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponent = [LoginComponent, DashboardComponent, AdminLoginComponent]
+export const routingComponent = [DashboardComponent, AdminLoginComponent, AdminPageComponent ]

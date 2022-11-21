@@ -13,6 +13,8 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import { DashboardContentComponent } from './dashboard-content/dashboard-content.component';
+import { UserDirectComponent } from './user-direct/user-direct.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
     HeaderComponent,
     AdminLoginComponent,
     AdminPageComponent,
+    DashboardContentComponent,
+    UserDirectComponent,
     
   ],
   imports: [

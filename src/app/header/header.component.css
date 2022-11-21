@@ -3,7 +3,10 @@
     z-index: 999;
     width: 100%;
     margin: 0px;
+    opacity: 1;
+    
   }
+
   .subs{
     height: 40px;
   }

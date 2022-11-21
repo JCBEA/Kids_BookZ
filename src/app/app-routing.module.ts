@@ -5,14 +5,21 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { UserDirectComponent } from './user-direct/user-direct.component';
+
 
 
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'admin-login', component: AdminLoginComponent},
   {path: 'admin-page', component: AdminPageComponent},
+
   {path: 'about-us', component: AboutUsComponent},
   { path: '',redirectTo:'dashboard', pathMatch:'full'}
+
+  { path:'user-direct', component: UserDirectComponent},
+  { path: '',redirectTo:'user-direct', pathMatch:'full'}
+
 ];
 
 @NgModule({
@@ -20,4 +27,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponent = [DashboardComponent, AdminLoginComponent, AdminPageComponent, AboutUsComponent]
+export const routingComponent = [DashboardComponent, AdminLoginComponent, AdminPageComponent, UserDirectComponent ]
+

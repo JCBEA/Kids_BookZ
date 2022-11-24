@@ -1,0 +1,54 @@
+<div class="bg">
+<br><div class="btn-1" type="submit" (click)="signOut()" value="Logout">
+    Logout
+      </div>
+<br><br><br>
+<div class="card">
+    <div class="card-body"  >
+        <form [formGroup]= "formTemplate" (submit)= "onSubmit(formTemplate.value)">
+            <div class="right">
+            <div class="text-center">
+                <img [src]= "imgSrc" style="border: 1px solid rgb(16, 100, 179);" height="250px" width="300px" (click)= "fileUploader.click()">
+            </div>
+            <div class="form-group float-right">
+                <label>Select file to upload</label>
+                <input type="file" class="form-control" #fileUploader formControlName="imageUrl" (change)= "showPreview($event)" style="height: 4rem;"> 
+                <div class="text-danger" *ngIf= "isSubmitted && formControls.imageUrl.errors?.['required']">This field is required</div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control"  formControlName="Title" placeholder="Title">
+                <div class="text-danger" *ngIf= "isSubmitted && formControls.Title.errors?.['required']">This field is required</div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control"  formControlName="author" placeholder="author">
+                <div class="text-danger" *ngIf= "isSubmitted && formControls.author.errors?.['required']">This field is required</div>
+            </div>
+            <label>Category</label>
+            <div class="form-group">
+                <select formControlName="category" class="form-control">
+                    <option value="Fable" selected>Fable</option>
+                    <option value="Sci-fi">Sci-fi</option>
+                    <option value="Fantasy">fantasy</option>
+                    <option value="Fiction">Fiction</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6" >
+                <a routerLink= "/image/list"class="btn btn-primary btn-block float-right">Go to Menu</a>
+            </div>
+        </div>
+        <div class="left">
+            <div class="form-group">
+                <textarea type="text" class="form-control"  formControlName="Story" placeholder="Write the Story" style="height: 500px;resize:none; width: 400px;"></textarea>
+                <div class="text-danger" *ngIf= "isSubmitted && formControls.Story.errors?.['required']">This field is required</div>
+            </div>
+            <div class="form-row">
+                <div class="form-grup col-md-6">
+                    <button type="submit" class="btn btn-success btn-block float-right">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+</div>
+</div>

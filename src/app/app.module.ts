@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,15 @@ import { DashboardContentComponent } from './dashboard-content/dashboard-content
 import { UserDirectComponent } from './user-direct/user-direct.component';
 
 import { AboutUsComponent } from './about-us/about-us.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
+import { BooksComponent } from './Books/Books.component';
+import { AddBookComponent } from './Books/addBook/AddBook.component';
+import { BookListComponent } from './Books/Book-list/Book-list.component';
+
+
+
 
 
 @NgModule({
@@ -30,13 +39,19 @@ import { AboutUsComponent } from './about-us/about-us.component';
     DashboardContentComponent,
     UserDirectComponent,
     AboutUsComponent,
-
+    BooksComponent,
+    AddBookComponent,
+    BookListComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(environment. firebase),
+    AngularFireStorageModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
     provideAuth(() => getAuth())

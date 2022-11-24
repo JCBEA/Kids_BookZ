@@ -1,0 +1,36 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color:#d2b48c;
+}
+.section{
+    width: 100%;
+    min-height: 100vh;
+    background-color:#1d2951;
+}
+.container{
+    width: 80%;
+    display: block;
+    margin:auto;
+    padding-top: 100px;
+}
+.content-section{
+    float: left;
+    width: 55%;
+}
+.content-section .content h3{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+img{
+    width:500px;
+    height: 200px;
+    position: absolute;
+    top:20%;
+    left: 55%
+}
+
+

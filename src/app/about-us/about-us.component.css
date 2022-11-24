@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(128, 106, 87);
+    background-image: url(/src/assets/images/bgus2.gif);
+    height: 100vh;
+    
+}
+
+header{
+    font-family: sans-serif;
+    font-size: 70px;
+    text-align: center;
+    color: black;
+}
+h1{
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+    font-size: 30px;
+}
+nav {
+    background-color: rgba(0, 0, 0, 0.338); 
+    text-align: center;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+nav a {
+    text-decoration: none;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+a {
+    color: black;
+    font-family: sans-serif;
+}

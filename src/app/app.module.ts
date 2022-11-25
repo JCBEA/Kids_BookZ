@@ -18,6 +18,7 @@ import { DashboardContentComponent } from './dashboard-content/dashboard-content
 import { UserDirectComponent } from './user-direct/user-direct.component';
 
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
     DashboardContentComponent,
     UserDirectComponent,
     AboutUsComponent,
+    ContactUsComponent,
 
     
   ],

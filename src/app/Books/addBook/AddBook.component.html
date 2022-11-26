@@ -1,7 +1,4 @@
 <div class="bg">
-<br><div class="btn-1" type="submit" (click)="signOut()" value="Logout">
-    Logout
-      </div>
 <br><br><br>
 <div class="card">
     <div class="card-body"  >
@@ -33,7 +30,7 @@
                 </select>
             </div>
             <div class="form-group col-md-6" >
-                <a routerLink= "/image/list"class="btn btn-primary btn-block float-right">Go to Menu</a>
+                <a class="btn btn-primary btn-block float-right"(click)="signOut()" value="Logout" >Logout</a>
             </div>
         </div>
         <div class="left">

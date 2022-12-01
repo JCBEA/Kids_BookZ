@@ -1,80 +1,25 @@
-<div class="header-new">
-    <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+
+<div class="bg">
+  <br><br><br>
+  <div class="card">
       
-      <ul class="nav navbar-nav">
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-      <li><a class="login" routerLink="/admin-login">Logout</a></li>
-      </ul>
-  
-  
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Achievements <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a class="subs" routerLink = "">GOOD JOB</a></li>
-            <li><a class="subs" routerLink = "">SK Projects</a></li>
-            <li><a class="subs" routerLink = "">Widening</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Categories <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a class="subs" routerLink="">Fable</a></li>
-            <li><a class="subs" routerLink = "">Fiction</a></li>
-            <li><a class="subs" routerLink = "">Bed Stories</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About Us <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a class="subs" href = "#content2">The Team</a></li>
-            <li><a class="subs" href = "#content3">Contact Us</a></li>
-            <li><a class="subs" href = "#content4">Donate</a></li>
-          </ul>
-        </li>
-      </ul>
-  
-    </div>
-  </nav>
-  </div>
-  <p style="background-image: url('Kbz.png;');"></p>
-
-  <div class="adminbg">
-  <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-    <div class="addbooks">
-       
-        <form #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
-            <h1 class="p1">Add Book</h1>
-            <h3>Title</h3>
-            <input type="text" ngModel id="username" name="title" placeholder="Title" /><br>
-            <p>Story</p>
-            <textarea id="tutorial" ngModel name="story" rows="20" cols="150"></textarea><br><br>
-            <input type="date" ngModel id="published" name="published" placeholder="published" />
-            <input type="text" ngModel id="author" name="author" placeholder="author" />
+              </div>
+              <label>Category</label>
+              <div class="form-group">
+                  <select formControlName="category" class="form-control">
+                      <option value="Fable" selected>Fable</option>
+                      <option value="Sci-fi">Sci-fi</option>
+                      <option value="Fantasy">fantasy</option>
+                      <option value="Fiction">Fiction</option>
+                  </select>
+              </div>
+              <div class="form-group col-md-6" >
+                  <a class="btn btn-primary btn-block float-right"(click)="signOut()" value="Logout" >Logout</a>
+              </div>
+          </div>
           
-            <!-- Upload image input-->
-          <div class="input-group mb-3 px-2 py-2 rounded-pill bg-white shadow-sm">
-            <input id="upload" type="file" onchange="readURL(this);" class="form-control border-0">
-            <label id="upload-label" for="upload" class="font-weight-light text-muted">Choose file</label>
-            <div class="input-group-append">
-                <label for="upload" class="btn btn-light m-0 rounded-pill px-4"> <i class="fa fa-cloud-upload mr-2 text-muted"></i><small class="text-uppercase font-weight-bold text-muted">Choose file</small></label>
-            </div>
-        </div>
-
-        <!-- Uploaded image area-->
-        <p class="font-italic text-white text-center">The image uploaded will be rendered inside the box below.</p>
-        <div class="image-area mt-4"><img id="imageResult" src="#" alt="" class="img-fluid rounded shadow-sm mx-auto d-block"></div>
-
-        </form>
-    </div>
-
-    <input type="submit" id="saveData" name="signup_submit"  class="btn btn-primary mb-2" value="Add" />
-    <input type="submit"  class="btn btn-danger mb-2" (click)="signOut()" value="Logout">
-    
-    </div>
-  </div>
-</div>
+              <div class="form-row">
+                  <div class="form-grup col-md-6">
+                      <button type="submit" class="btn btn-success btn-block float-right">Submit</button>
+                  </div>
+              </div>

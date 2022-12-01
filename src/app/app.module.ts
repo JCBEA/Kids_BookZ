@@ -24,6 +24,9 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { BooksComponent } from './Books/Books.component';
 import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
+import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
+import { DeleteBookComponent } from './delete-book/delete-book.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 
   
 
@@ -42,6 +45,9 @@ import { BookListComponent } from './Books/Book-list/Book-list.component';
     BooksComponent,
     AddBookComponent,
     BookListComponent,
+    AdminSidenavComponent,
+    DeleteBookComponent,
+    EditBookComponent,
     
   ],
   imports: [

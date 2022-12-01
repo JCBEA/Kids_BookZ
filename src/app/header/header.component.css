@@ -1,6 +1,5 @@
 .header-new{
-    position: fixed;
-    z-index: 999;
+  position: fixed;
     width: 100%;
     margin: 0px;
     opacity: 1;

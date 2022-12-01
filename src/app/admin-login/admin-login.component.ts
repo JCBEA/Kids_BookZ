@@ -31,7 +31,7 @@ export class AdminLoginComponent implements OnInit {
       last_login: date
     });
     alert('Login Successful --Hi! Admin--')
-    this.route.navigate(['/Books/upload'])
+    this.route.navigate(['/admin-page'])
 
   })
   .catch((error) => {

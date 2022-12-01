@@ -1,5 +1,6 @@
+<app-admin-sidenav></app-admin-sidenav>
 <div class="bg">
-<br><br><br>
+<br>
 <div class="card">
     <div class="card-body"  >
         <form [formGroup]= "formTemplate" (submit)= "onSubmit(formTemplate.value)">
@@ -28,9 +29,6 @@
                     <option value="Fantasy">fantasy</option>
                     <option value="Fiction">Fiction</option>
                 </select>
-            </div>
-            <div class="form-group col-md-6" >
-                <a class="btn btn-primary btn-block float-right"(click)="signOut()" value="Logout" >Logout</a>
             </div>
         </div>
         <div class="left">

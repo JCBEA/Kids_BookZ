@@ -1,0 +1,36 @@
+
+<app-admin-sidenav></app-admin-sidenav>
+<div class="card">
+    <div class="card-body"  >
+        <form #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
+            <div class="right">
+            <div class="form-group">
+                <input type="text" ngModel id="Title" class="form-control" name="Title" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" ngModel id="author" name="author" placeholder="author">
+            </div>
+            <label>Category</label>
+            <div class="form-group">
+                <select class="form-control" ngModel id="category" name="category">
+                    <option value="Fable" selected>Fable</option>
+                    <option value="Sci-fi">Sci-fi</option>
+                    <option value="Fantasy">fantasy</option>
+                    <option value="Fiction">Fiction</option>
+                </select>
+            </div>
+        </div>
+        <div class="left">
+            <div class="form-group">
+                <textarea type="text" class="form-control" placeholder="Write the Story"  ngModel id="Story" name="Story" style="height: 500px;resize:none; width: 400px;"></textarea>
+            </div>
+            <div class="form-row">
+                <div class="form-grup col-md-6">
+                    <input type="submit" class="btn btn-success btn-block float-right" value="Update">
+                </div>
+            </div>
+        </div>
+
+        </form>
+    </div>
+</div>

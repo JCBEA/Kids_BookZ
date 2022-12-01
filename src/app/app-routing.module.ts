@@ -11,7 +11,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { BooksComponent } from './Books/Books.component';
 import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
-
+import { DeleteBookComponent } from './delete-book/delete-book.component';
+import { EditBookComponent } from './edit-book/edit-book.component';
 
 
 
@@ -27,8 +28,11 @@ const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'admin-login', component: AdminLoginComponent},
   {path: 'admin-page', component: AdminPageComponent},
-  { path:'user-direct', component: UserDirectComponent},
+  {path:'user-direct', component: UserDirectComponent},
   {path: 'about-us', component: AboutUsComponent},
+  {path: 'delete-book', component: DeleteBookComponent},
+  {path: 'edit-book', component: EditBookComponent},
+  
 ];
 
 @NgModule({

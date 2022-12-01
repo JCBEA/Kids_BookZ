@@ -1,5 +1,10 @@
 .header-new{
+<<<<<<< HEAD
   position: fixed;
+=======
+    position: absolute;
+    z-index: 999;
+>>>>>>> origin/temp-branch
     width: 100%;
     margin: 0px;
     opacity: 1;

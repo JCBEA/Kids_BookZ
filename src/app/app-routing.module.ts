@@ -18,7 +18,7 @@ import { BookListComponent } from './Books/Book-list/Book-list.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Books/upload', pathMatch: 'full' },
+  { path: '', redirectTo: 'user-direct', pathMatch: 'full' },
   {path:'Books', component: BooksComponent,children:[
     {path:'upload', component: AddBookComponent},
     {path:'list', component: BookListComponent}

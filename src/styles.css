@@ -1,3 +1,13 @@
 body{
     margin: 0 ;
 }
+.imagebox{
+    height: 300px;
+    width: 300px;
+    margin: 50px;
+}
+.img-fluid{
+    height: 300px;
+    width: 300px;
+    
+}

@@ -14,9 +14,11 @@ export class EditBookComponent implements OnInit {
   }
 registerUser(value: any){
   
-  update(ref(this.database,'bookDetails/' + value.Title), {
+  update(ref(this.database,'bookDetails/' + value.id), {
+    Title: value.Title,
     Story: value.Story,
-    author: value.author
+    author: value.author,
+    imageUrl: value
   });
   alert('Update Successfuly');
 

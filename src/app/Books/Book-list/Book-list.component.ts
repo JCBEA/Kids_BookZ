@@ -9,8 +9,7 @@ import { ImageService } from 'src/app/shared/image.service';
 export class BookListComponent implements OnInit {
   imageList: any = [];
   rowIndexArray: any = [];
-
-  constructor(private service: ImageService, ) { }
+  constructor(private service: ImageService) { }
 
   ngOnInit(){
     this.service.bookDetails.snapshotChanges().subscribe(

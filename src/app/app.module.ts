@@ -28,12 +28,7 @@ import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 import { EditBookComponent } from './edit-book/edit-book.component';
 
-<<<<<<< HEAD
   
-=======
-
->>>>>>> 37077c872108f7dd3d7e8f554f23e5a642dff863
-
 
 
 @NgModule({

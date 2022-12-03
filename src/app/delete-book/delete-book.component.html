@@ -1,0 +1,9 @@
+<app-admin-sidenav></app-admin-sidenav>
+
+
+<div style="margin-left: 500px;">
+<form #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
+    <input type="text" ngModel id="id" class="form-control" name="id" placeholder="id">
+    <input type="submit" name="signup_submit" value="Delete">
+</form>
+</div>

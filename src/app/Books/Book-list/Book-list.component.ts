@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageService } from 'src/app/shared/image.service';
+import { Database, ref, set, update, remove} from '@angular/fire/database';
 
 @Component({
   selector: 'app-image-list',
@@ -10,7 +11,7 @@ export class BookListComponent implements OnInit {
   imageList: any = [];
   rowIndexArray: any = [];
 
-  constructor(private service: ImageService, ) { }
+  constructor(private service: ImageService,public database: Database ) { }
 
   ngOnInit(){
     this.service.bookDetails.snapshotChanges().subscribe(

@@ -5,6 +5,7 @@ import { Database, ref, set, update, remove} from '@angular/fire/database';
   templateUrl: './delete-book.component.html',
   styleUrls: ['./delete-book.component.css']
 })
+
 export class DeleteBookComponent implements OnInit {
 
   constructor(public database: Database) { }
@@ -18,5 +19,7 @@ export class DeleteBookComponent implements OnInit {
     alert('Update Successfuly');
   
   }
+
+  
 
 }

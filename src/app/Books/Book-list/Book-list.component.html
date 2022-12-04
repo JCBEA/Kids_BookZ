@@ -1,26 +1,31 @@
+<app-header></app-header>
 <table *ngIf= "imageList">
+    <br>
     <tr *ngFor = "let i of rowIndexArray">
         <td>
             <div class="imagebox">
                 <img [src]= "imageList[3*i].imageUrl" class="img-fluid">
-                <span class="image-desc">{{imageList[3*i].category}}</span>
-                <span class="image-desc">{{imageList[3*i].Title}}</span>
-                <span class="image-desc">{{imageList[3*i].author}}</span>
+                <span class="image-desc">{{imageList[3*i].id}}</span><br>
+                <span class="image-desc">{{imageList[3*i].category}}</span><br>
+                <span class="image-desc">{{imageList[3*i].Title}}</span><br>
+                <span class="image-desc">{{imageList[3*i].author}}</span><br>
             </div>
         </td>
         <td *ngIf= "imageList[3*i+1]">
             <div class="imagebox">
                 <img [src]= "imageList[3*i+1].imageUrl" class="img-fluid">
-                <span class="image-desc">{{imageList[3*i+1].category}}</span>
-                <span class="image-desc">{{imageList[3*i+1].Title}}</span>
+                <span class="image-desc">{{imageList[3*i+1].id}}</span><br>
+                <span class="image-desc">{{imageList[3*i+1].category}}</span><br>
+                <span class="image-desc">{{imageList[3*i+1].Title}}</span><br>
                 <span class="image-desc">{{imageList[3*i+1].author}}</span>
             </div>
         </td>
         <td *ngIf= "imageList[3*i+2]">
             <div class="imagebox">
                 <img [src]= "imageList[3*i+2].imageUrl" class="img-fluid">
-                <span class="image-desc">{{imageList[3*i+2].category}}</span>
-                <span class="image-desc">{{imageList[3*i+2].Title}}</span>
+                <span class="image-desc">{{imageList[3*i+2].id}}</span><br>
+                <span class="image-desc">{{imageList[3*i+2].category}}</span><br>
+                <span class="image-desc">{{imageList[3*i+2].Title}}</span><br>
                 <span class="image-desc">{{imageList[3*i+2].author}}</span>
             </div>
         </td>

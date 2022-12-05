@@ -19,7 +19,7 @@ export class DeleteBookComponent implements OnInit {
     alert('Update Successfuly');
   
   }
-
+ 
   
 
 }

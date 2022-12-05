@@ -26,7 +26,8 @@ import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
-import { EditBookComponent } from './edit-book/edit-book.component';
+
+import {NgConfirmModule} from 'ng-confirm-box';
 
   
 
@@ -47,10 +48,10 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     BookListComponent,
     AdminSidenavComponent,
     DeleteBookComponent,
-    EditBookComponent,
     
   ],
   imports: [
+   NgConfirmModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -60,7 +61,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     AngularFireStorageModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
   ],
   providers: [],
   bootstrap: [AppComponent]

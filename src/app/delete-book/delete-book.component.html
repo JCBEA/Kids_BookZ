@@ -1,9 +1,34 @@
+<div class="bg">
 <app-admin-sidenav></app-admin-sidenav>
 
+<table *ngIf= "imageList" style="margin-left: 20rem;">
+    <div><H1 style="color:white">DELETE BOOKS</H1></div>
+    <tr *ngFor = "let i of rowIndexArray">
+        <div class="box">
+            <div class="imagebox" (click)="registerUser(imageList[3*i].id)" type="submit">
+                <img [src]= "imageList[3*i].imageUrl" class="img-fluid"><br>
+                <span class="image-desc"><span class="set">Category:</span> {{imageList[3*i].category}}</span><br>
+                <span class="image-desc"><span class="set">Title:</span> {{imageList[3*i].Title}}</span><br>
+                <span class="image-desc"><span class="set">Author:</span> {{imageList[3*i].author}}</span><br>
+            </div>
+        </div>
+        <div class="box" *ngIf= "imageList[3*i+1]">
+            <div class="imagebox" (click)="registerUser(imageList[3*i+1].id)" type="submit">
+                <img [src]= "imageList[3*i+1].imageUrl" class="img-fluid"><br>
+                <span class="image-desc"><span class="set">Category:</span> {{imageList[3*i+1].category}}</span><br>
+                <span class="image-desc"><span class="set">Title:</span> {{imageList[3*i+1].Title}}</span><br>
+                <span class="image-desc"><span class="set">Author:</span> {{imageList[3*i+1].author}}</span>
+            </div>
+        </div>
+        <div class="box" *ngIf= "imageList[3*i+2]">
+            <div class="imagebox" (click)="registerUser(imageList[3*i+2].id)" type="submit">
+                <img [src]= "imageList[3*i+2].imageUrl" class="img-fluid"><br>   
+                <span class="image-desc"><span class="set">Category:</span> {{imageList[3*i+2].category}}</span><br>
+                <span class="image-desc"><span class="set">Title:</span> {{imageList[3*i+2].Title}}</span><br>
+                <span class="image-desc"><span class="set">Author:</span> {{imageList[3*i+2].author}}</span>
+            </div>
+        </div>
+    </tr>
 
-<div style="margin-left: 500px;">
-<form #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
-    <input type="text" ngModel id="id" class="form-control" name="id" placeholder="id">
-    <input type="submit" name="signup_submit" value="Delete">
-</form>
+</table>
 </div>

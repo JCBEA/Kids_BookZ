@@ -10,10 +10,14 @@ export class ImageService {
   constructor(private firebase: AngularFireDatabase) { }
 
   getbookDetails() {
-    this.bookDetails = this.firebase.list('bookDetails');
+    this.bookDetails = this.firebase.list('/bookDetails');
   }
 
-  insertbookDetails(bookDetails:any) {
-    this.bookDetails.push(bookDetails);
+  insertbookDetails(payload:any) {
+    const dbRef = this.firebase.list('/bookDetails')
+    dbRef.push(payload).then(res =>{
+      payload.id = res.key
+      this.firebase.object('/bookDetails/'+`${payload.id}`).update(payload)
+    })
   }
 }

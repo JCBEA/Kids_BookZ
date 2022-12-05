@@ -32,7 +32,6 @@ import {NgConfirmModule} from 'ng-confirm-box';
   
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

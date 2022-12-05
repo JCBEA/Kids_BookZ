@@ -26,8 +26,8 @@ import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
-
 import {NgConfirmModule} from 'ng-confirm-box';
+
 
   
 
@@ -50,7 +50,7 @@ import {NgConfirmModule} from 'ng-confirm-box';
     
   ],
   imports: [
-   NgConfirmModule,
+    NgConfirmModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -62,6 +62,7 @@ import {NgConfirmModule} from 'ng-confirm-box';
     provideDatabase(() => getDatabase()),
     provideAuth(() => getAuth()),
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

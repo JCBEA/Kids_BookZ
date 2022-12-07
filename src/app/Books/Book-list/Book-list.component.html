@@ -1,41 +1,42 @@
+<div class="body" >
 <app-header></app-header>
+<br><br>
 <table *ngIf= "imageList">
     <br>
     <tr *ngFor = "let i of rowIndexArray">
-        <td>
-            <div class="imagebox">
-                <img [src]= "imageList[3*i].imageUrl" class="img-fluid">
-                <span class="image-desc">{{imageList[3*i].id}}</span><br>
+        <td *ngIf= "imageList[3*i]">
+            <div class="imagebox" (click)="simpleAlert(imageList[3*i].Story,imageList[3*i].Title)">
+                <div class="content">
+                <img [src]= "imageList[3*i].imageUrl" class="img-fluid"><br>
                 <span class="image-desc">{{imageList[3*i].category}}</span><br>
                 <span class="image-desc">{{imageList[3*i].Title}}</span><br>
-                <span class="image-desc">{{imageList[3*i].author}}</span><br>
-                <span class="image-desc">{{imageList[3*i].Story}}</span>
+                <span class="image-desc">{{imageList[3*i].author}}</span> 
+            </div>
             </div>
         </td>
         <td *ngIf= "imageList[3*i+1]">
-            <div class="imagebox">
-                <img [src]= "imageList[3*i+1].imageUrl" class="img-fluid">
-                <span class="image-desc">{{imageList[3*i+1].id}}</span><br>
+            <div class="imagebox" (click)="simpleAlert(imageList[3*i+1].Story,imageList[3*i+1].Title)">
+                <div class="content">
+                <img [src]= "imageList[3*i+1].imageUrl" class="img-fluid"><br>
                 <span class="image-desc">{{imageList[3*i+1].category}}</span><br>
                 <span class="image-desc">{{imageList[3*i+1].Title}}</span><br>
                 <span class="image-desc">{{imageList[3*i+1].author}}</span><br>
-                <span class="image-desc">{{imageList[3*i+1].Story}}</span>
+            </div>
             </div>
         </td>
         <td *ngIf= "imageList[3*i+2]">
-            <div class="imagebox">
-                <img [src]= "imageList[3*i+2].imageUrl" class="img-fluid">
-                <span class="image-desc">{{imageList[3*i+2].id}}</span><br>
+            <div class="imagebox" (click)="simpleAlert(imageList[3*i+2].Story,imageList[3*i+2].Title)">
+                <div class="content">
+                <img [src]= "imageList[3*i+2].imageUrl" class="img-fluid"><br>
                 <span class="image-desc">{{imageList[3*i+2].category}}</span><br>
                 <span class="image-desc">{{imageList[3*i+2].Title}}</span><br>
-                <span class="image-desc">{{imageList[3*i+2].author}}</span><br>
-                <span class="image-desc">{{imageList[3*i+2].Story}}</span>
+                <span class="image-desc">{{imageList[3*i+2].author}}</span>
+            </div>
             </div>
         </td>
     </tr>
-
 </table>
-
+</div>
 
 
 

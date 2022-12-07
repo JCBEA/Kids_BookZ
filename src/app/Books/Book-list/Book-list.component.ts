@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ImageService } from 'src/app/shared/image.service';
 import { Database, ref, set, update, remove} from '@angular/fire/database';
 import Swal from 'sweetalert2'
+import { CustomProvider } from '@angular/fire/app-check';
 
 
 @Component({
@@ -27,10 +28,24 @@ export class BookListComponent implements OnInit {
     );
   }
   
+  
   simpleAlert(value:any, id:any){
-    Swal.fire(id,value)
+    Swal.fire({
+      title: id,
+      text: value,
+      confirmButtonText: 'Done',
+      width: '400px',
+      customClass: {
+        popup: 'large-sa-popup'
+      }
+      
+    })
+    
+
+    
 
     
   }
+  
   
 }

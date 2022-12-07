@@ -1,5 +1,50 @@
-img{
-    height: 300px;
-    width: 300px;
-}
+.body{
+    background-image: url("../../../assets/images/bg.gif");
+    background-size:cover;  
+    background-position: center center;
+    min-height: 100vh;
+    min-width: 100vh;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+ }
 
+ .imagebox{
+    border: 1px solid #222;
+
+    box-shadow: 1px 1px 40px #9803ee,
+                  1px 1px 20px #00ccff;
+     animation: anime 1s Linear infinite;
+    box-sizing: border-box;
+    margin: 2rem;
+    height: 230px;
+    width: 200px;
+    float: left;
+    color: white;
+    background-color: #000000;
+    border-radius: 10px;
+    transition: 0.003s;
+    cursor: pointer;
+    text-align: center;
+}
+.imagebox:hover{
+    color: white;
+    background-color: #141414;
+    box-shadow: 1px 1px 20px #00ccff,
+                   1px 1px 40px #9803ee;
+}
+img{
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 1px 1px 20px #0980f0,
+              1px 1px 40px #00d9ff;
+     animation: anime 1s Linear infinite;
+     height: 150px;
+     width: 150px;
+     border-radius: 30px;
+}   
+.set{
+    font-weight:bolder;
+}
+.content{
+    margin-top: 15px;
+}

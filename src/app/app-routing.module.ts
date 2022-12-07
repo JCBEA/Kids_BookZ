@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'user-direct', pathMatch: 'full' },
   {path:'Books', component: BooksComponent,children:[
     {path:'upload', component: AddBookComponent},
-    {path:'list', component: BookListComponent}
+    {path:'list', component: BookListComponent},
   ]},
 
   {path: 'dashboard', component: DashboardComponent},

@@ -28,7 +28,7 @@ import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 
 import {NgConfirmModule} from 'ng-confirm-box';
-
+import { MatDialogModule } from '@angular/material/dialog';
   
 
 
@@ -48,9 +48,9 @@ import {NgConfirmModule} from 'ng-confirm-box';
     BookListComponent,
     AdminSidenavComponent,
     DeleteBookComponent,
-    
   ],
   imports: [
+  MatDialogModule,
    NgConfirmModule,
     BrowserModule,
     AppRoutingModule,

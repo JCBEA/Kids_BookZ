@@ -10,28 +10,11 @@ import { Router } from '@angular/router';
 })
 export class AdminPageComponent implements OnInit {
 
-  constructor(public auth: Auth, public database: Database,
-    public route:Router) {
+  constructor() {
   }
   ngOnInit(): void {
   }
 
 
 
-  registerUser(value: any) {
-    //create data
-    set(ref(this.database, 'Books/' + value.title), {
-     title: value.title,
-      story: value.story,
-       published : value.published,
-       author: value.author
-     }); 
-     alert('user created!');
-}
-signOut() {
-  return this.auth.signOut().then(() => {
-    window.alert('Logged out!');
-    this.route.navigate(['/admin-login'])
-  });
-}
 }

@@ -27,7 +27,12 @@ import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 import {NgConfirmModule} from 'ng-confirm-box';
+<<<<<<< HEAD
 
+=======
+import { MatDialogModule } from '@angular/material/dialog';
+  
+>>>>>>> temp-branch
 
   
 
@@ -47,10 +52,14 @@ import {NgConfirmModule} from 'ng-confirm-box';
     BookListComponent,
     AdminSidenavComponent,
     DeleteBookComponent,
-    
   ],
   imports: [
+<<<<<<< HEAD
     NgConfirmModule,
+=======
+  MatDialogModule,
+   NgConfirmModule,
+>>>>>>> temp-branch
     BrowserModule,
     AppRoutingModule,
     FormsModule,

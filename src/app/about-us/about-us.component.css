@@ -1,5 +1,179 @@
+
 div{
     height: 200px; width: 500px;
     background-color: aqua;
     background-color: aqua;
+}
+
+.section{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+h1{
+    margin-top: -0px;
+    background-color: rgb(47, 39, 39);
+    padding: 12px 40px;
+    text-decoration: none;
+    color: darkgrey;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+.container{
+    width: 80%;
+}
+.container .p{
+    width: 500px;
+    text-align: justify;
+    line-height: 2;
+}
+ .container .mission p{
+    width: 500px;
+    text-align: justify;
+    line-height: 2;
+}
+.container .vision p{
+    width: 500px;
+    text-align: justify;
+    line-height: 2;
+}
+.container .values p{
+    width: 500px;
+    text-align: justify;
+    line-height: 2;
+}
+.button{
+    margin-top: 30px;
+}
+.button a{
+    background-color: rgb(71, 66, 66);
+    padding: 12px 40px;
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+.button a:hover{
+    background-color:  rgb(47, 39, 39);
+    color: white;
+}
+.image img{
+    height: 300px;
+    width: 600px;
+}
+.image img{
+    float:right;
+    margin-top: -1000px;
+    margin-right: 150px;
+}
+.Team{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+.Team ul{
+    padding-top: 20px;
+    position:relative;
+    transition: .5s;
+}
+
+.Team li{
+    display: inline-table;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 7.5px;
+    transition: .5s;
+}
+
+.Team li:before , .Team li:after{
+    content: '';
+    position: absolute;
+    top:0;
+    right: 50px;
+    border-top: 1px solid #ccc;
+    width: 51%;
+    height: 10px;
+}
+
+.Team li:after{
+    right:auto;
+    left:50%;
+    border-left: 1px solid #ccc;
+}
+
+.Team li:only-child:after, .Team li:only-child:before{
+    display: none;
+}
+
+.Team li:only-child{
+    padding-top: 0;
+}
+
+.Team li:first-child:before, .Team li:last-child:after{
+    border: 0;
+}
+
+.Team li:last-child:before{
+    border-right: 1px solid #ccc;
+    border-radius: 0px 5px 0px 0px;
+}
+
+.Team li:first-child:after{
+    
+    border-radius: 5px 0px 0px 0px;
+}
+
+.Team ul ul:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height: 20px;
+}
+
+.Team a{
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-grid;
+    border-radius: 5px;
+    text-decoration-line: none;
+    border-radius: 5px;
+    transition: .5s;
+}
+
+.Team a img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px !important;
+    border-radius: 100px;
+    margin: auto;
+}
+
+.Team span{
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    color: #666;
+    padding: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+/*Hover-Section*/
+
+.Team li a:hover, .Team li a:hover img, .Team li a:hover span, .Team li a:hover+ul li a {
+    background: skyblue;
+    color: #000;
+    border:1px solid #94a0b4;
+    box-shadow: Opx Opx 8px -5px #5f5f5f;
+}
+
+.Team li a:hover+ul li:after, .Team li a:hover+ul li:before, .Team li a:hover+ul:before, .Team li a:hover+ul ul:before {
+    border-color: #94a0b4;
+
 }

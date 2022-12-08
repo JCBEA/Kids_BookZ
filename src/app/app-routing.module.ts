@@ -48,4 +48,4 @@ export class AppRoutingModule { }
 
 export const routingComponent = [DashboardComponent, AdminLoginComponent, AdminPageComponent, UserDirectComponent, ContactUsComponent]
 
-export const routingComponent = []
+

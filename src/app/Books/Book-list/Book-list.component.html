@@ -28,7 +28,7 @@
                 <span class="image-desc">{{imageList[3*i+2].category}}</span>
                 <span class="image-desc">{{imageList[3*i+2].Title}}</span>
         <td *ngIf= "imageList[3*i]">
-            <div class="imagebox" (click)="simpleAlert(imageList[3*i].Story,imageList[3*i].Title)">
+            <div class="imagebox" (click)="simpleAlert(imageList[3*i].Story,imageList[3*i].Title,imageList[3*i].imageUrl)">
                 <div class="content">
                 <img [src]= "imageList[3*i].imageUrl" class="img-fluid"><br>
                 <span class="image-desc">{{imageList[3*i].category}}</span><br>
@@ -38,7 +38,7 @@
             </div>
         </td>
         <td *ngIf= "imageList[3*i+1]">
-            <div class="imagebox" (click)="simpleAlert(imageList[3*i+1].Story,imageList[3*i+1].Title)">
+            <div class="imagebox" (click)="simpleAlert(imageList[3*i+1].Story,imageList[3*i+1].Title,imageList[3*i+1].imageUrl)">
                 <div class="content">
                 <img [src]= "imageList[3*i+1].imageUrl" class="img-fluid"><br>
                 <span class="image-desc">{{imageList[3*i+1].category}}</span><br>
@@ -48,7 +48,7 @@
             </div>
         </td>
         <td *ngIf= "imageList[3*i+2]">
-            <div class="imagebox" (click)="simpleAlert(imageList[3*i+2].Story,imageList[3*i+2].Title)">
+            <div class="imagebox" (click)="simpleAlert(imageList[3*i+2].Story,imageList[3*i+2].Title,imageList[3*i+2].imageUrl)">
                 <div class="content">
                 <img [src]= "imageList[3*i+2].imageUrl" class="img-fluid"><br>
                 <span class="image-desc">{{imageList[3*i+2].category}}</span><br>

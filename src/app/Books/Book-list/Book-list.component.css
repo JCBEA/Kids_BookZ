@@ -54,3 +54,8 @@ img{
 .content{
     margin-top: 15px;
 }
+
+.swal2-title {
+    font-family:'Montserrat', sans-serif;
+    color: #00d9ff;
+  }

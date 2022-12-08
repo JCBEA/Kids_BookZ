@@ -29,22 +29,26 @@ export class BookListComponent implements OnInit {
   }
   
   
-  simpleAlert(value:any, id:any){
+  simpleAlert(value:any, id:any,img:any){
     Swal.fire({
-      title: id,
-      text: value,
+      title: value,
+      width: 1200,
+      padding: '20px',
+      imageUrl: img,
+      imageWidth: 200,
+      imageHeight: 200,
+      iconHtml: id,
+      icon: 'question',
+      color: 'black',
+      imageAlt: 'Custom image',
       confirmButtonText: 'Done',
-      width: '400px',
-      customClass: {
-        popup: 'large-sa-popup'
-      }
-      
+      background: 'url("../../../assets/images/newgif.gif")'
     })
     
 
     
 
-    
+    1
   }
   
   

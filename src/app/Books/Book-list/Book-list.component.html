@@ -3,10 +3,9 @@
 <div class="body" >
 <app-header></app-header>
 <br><br>
->>>>>>> temp-branch
 <table *ngIf= "imageList">
     <tr *ngFor = "let i of rowIndexArray">
-<<<<<<< HEAD
+
         <td>
             <div class="imagebox">
                 <img [src]= "imageList[3*i].imageUrl" class="img-fluid">
@@ -28,7 +27,6 @@
                 <img [src]= "imageList[3*i+2].imageUrl" class="img-fluid">
                 <span class="image-desc">{{imageList[3*i+2].category}}</span>
                 <span class="image-desc">{{imageList[3*i+2].Title}}</span>
-=======
         <td *ngIf= "imageList[3*i]">
             <div class="imagebox" (click)="simpleAlert(imageList[3*i].Story,imageList[3*i].Title)">
                 <div class="content">
@@ -55,13 +53,10 @@
                 <img [src]= "imageList[3*i+2].imageUrl" class="img-fluid"><br>
                 <span class="image-desc">{{imageList[3*i+2].category}}</span><br>
                 <span class="image-desc">{{imageList[3*i+2].Title}}</span><br>
->>>>>>> temp-branch
                 <span class="image-desc">{{imageList[3*i+2].author}}</span>
-            </div>
+                </div>
             </div>
         </td>
-    </tr>
-</table>
 </div>
 
 

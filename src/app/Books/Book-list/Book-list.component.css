@@ -49,6 +49,7 @@ img{
     margin-top: 15px;
 }
 
-.large-sa-popup {
-    font-size: 200px;
+.swal2-title {
+    font-family:'Montserrat', sans-serif;
+    color: #00d9ff;
   }

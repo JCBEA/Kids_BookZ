@@ -14,7 +14,7 @@ import { BooksComponent } from './Books/Books.component';
 import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
-
+import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
 
 
 
@@ -23,6 +23,7 @@ const routes: Routes = [
   {path:'Books', component: BooksComponent,children:[
     {path:'upload', component: AddBookComponent},
     {path:'list', component: BookListComponent},
+    {path:'fable', component: CategoryFableComponent},
   ]},
 
   {path: 'dashboard', component: DashboardComponent},

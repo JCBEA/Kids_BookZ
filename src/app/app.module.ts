@@ -28,12 +28,12 @@ import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
-
 import {NgConfirmModule} from 'ng-confirm-box';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ToonsComponent } from "./toons/ToonsComponent";
 
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
+
 
 @NgModule({
   declarations: [
@@ -57,8 +57,10 @@ import { CategoryFableComponent } from './Books/category-fable/category-fable.co
     CategoryFableComponent,
   ],
   imports: [
-  MatDialogModule,
-   NgConfirmModule,
+
+    NgConfirmModule,
+    MatDialogModule,
+    NgConfirmModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -70,6 +72,7 @@ import { CategoryFableComponent } from './Books/category-fable/category-fable.co
     provideDatabase(() => getDatabase()),
     provideAuth(() => getAuth()),
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

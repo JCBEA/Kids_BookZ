@@ -1,34 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { ImageService } from 'src/app/shared/image.service';
-import { Database, ref, set, update, remove,query,orderByChild,equalTo} from '@angular/fire/database';
+import { Database, ref, set, update, remove, orderByChild, equalTo, get, query} from '@angular/fire/database';
 import Swal from 'sweetalert2'
 import { CustomProvider } from '@angular/fire/app-check';
-import { style } from '@angular/animations';
-
 @Component({
-  selector: 'app-image-list',
-  templateUrl: './Book-list.component.html',
-  styleUrls: ['./Book-list.component.css']
+  selector: 'app-category-fable',
+  templateUrl: './category-fable.component.html',
+  styleUrls: ['./category-fable.component.css'],
+ 
 })
-export class BookListComponent implements OnInit {
+export class CategoryFableComponent implements OnInit {
+
   imageList: any = [];
-  rowIndexArray: any = [];
+  rowIndexArray: any = []; 
   constructor(private service: ImageService,public database: Database) { }
   
+
   ngOnInit(){
+
     this.service.bookDetails.snapshotChanges().subscribe(
       list => {
       this.imageList = list.map(item => {return item.payload.val();});
       this.rowIndexArray = Array.from(Array(Math.ceil(this.imageList.length/3)).keys());
+
       this.service.getbookDetails();  
       }
-    ); 
-
-
-    
+    );
   }
-
-
   
   
   simpleAlert(value:any, id:any,img:any){
@@ -44,17 +42,12 @@ export class BookListComponent implements OnInit {
       color: 'black',
       imageAlt: 'Custom image',
       confirmButtonText: 'Done',
-      background:'url("../../../assets/images/BGBGBG.png")' ,
-      backdrop: `
-      url("../../../assets/images/download.gif")
-    `
-      
+      background: 'url("../../../assets/images/newgif.gif")'
     })
     
+
+    
+
   }
-
-  
-
-  
-  
 }
+  

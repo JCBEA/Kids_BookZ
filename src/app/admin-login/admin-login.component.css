@@ -1,30 +1,38 @@
 .adminbg{
     min-width: 100vh;
-    min-height: 100vh;
+    min-height: 100vw;
     height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background: linear-gradient(to right, #b92b27, #1565c0);
+    background: linear-gradient(to right, #c53522, #1565c0);
+    position: fixed;
+
+
+
 }
 
 .card{
-    margin-bottom:20px;
-    border:none;
+left: 40%;
+top: 25%;
+position: fixed;
+margin: auto;
 }
 
+
 .box {
-    width: 500px;
+    text-align: center;
+    display: table;
+    border-radius: 20px;
+    min-width: 500px;
+    width: 500px auto;
     padding: 20px;
-    padding-bottom: 15%;
+    padding-bottom: 10%;
     position: absolute;
-    top: 50%;
-    left: 60%;
     background: #191919;
     text-align: center;
     transition: 0.25s;
-    margin-top: 50px;
     text-align:center;
     justify-content: center;
 }
@@ -92,13 +100,13 @@ ul.social-network li {
     margin: 0 5px
 }
 .btn-1 {
+    position: absolute;
     text-align: center;
     display: inline-block;
     padding: 15px 40px;
     border: 1px solid #fff;
     cursor: pointer;
     letter-spacing: 2px;
-    position:relative;
     overflow:hidden;
     margin: 0 20px;
     color: white;
@@ -120,5 +128,6 @@ ul.social-network li {
   .btn-1:hover:before {
     left:95%;
   }
-
-
+.row{
+    text-align: center;
+}

@@ -32,7 +32,8 @@ import { DeleteBookComponent } from './delete-book/delete-book.component';
 import {NgConfirmModule} from 'ng-confirm-box';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ToonsComponent } from "./toons/ToonsComponent";
-  
+
+import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
 
 
 @NgModule({
@@ -54,6 +55,7 @@ import { ToonsComponent } from "./toons/ToonsComponent";
     AdminSidenavComponent,
     DeleteBookComponent,
     ToonsComponent,
+    CategoryFableComponent,
   ],
   imports: [
   MatDialogModule,

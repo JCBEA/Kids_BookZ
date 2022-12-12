@@ -35,7 +35,11 @@ import {NgConfirmModule} from 'ng-confirm-box';
 import { MatDialogModule } from '@angular/material/dialog';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
   
+import {NgConfirmModule} from 'ng-confirm-box';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ToonsComponent } from "./toons/ToonsComponent";
 
+import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
 
 @NgModule({
   declarations: [
@@ -59,10 +63,14 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
     VerifyEmailComponent,
 
 
+    ToonsComponent,
+    CategoryFableComponent,
   ],
   imports: [
-  MatDialogModule,
-   NgConfirmModule,
+
+    NgConfirmModule,
+    MatDialogModule,
+    NgConfirmModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -74,6 +82,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
     provideDatabase(() => getDatabase()),
     provideAuth(() => getAuth()),
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

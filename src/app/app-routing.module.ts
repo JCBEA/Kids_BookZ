@@ -18,13 +18,15 @@ import { UpdatePassComponent } from './update-pass/update-pass.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 
-
+import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
+import { ToonsComponent } from './toons/ToonsComponent';
 
 const routes: Routes = [
   { path: '', redirectTo: 'user-direct', pathMatch: 'full' },
   {path:'Books', component: BooksComponent,children:[
     {path:'upload', component: AddBookComponent},
     {path:'list', component: BookListComponent},
+    {path:'fable', component: CategoryFableComponent},
   ]},
 
   {path: 'dashboard', component: DashboardComponent},
@@ -40,7 +42,7 @@ const routes: Routes = [
   {path:'user-direct', component: UserDirectComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'delete-book', component: DeleteBookComponent},
-  
+  {path: 'toons', component: ToonsComponent},
 ];
 
 @NgModule({

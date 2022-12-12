@@ -1,4 +1,6 @@
+
 <div class="body" >
+
 <app-header></app-header>
 <br><br><br><br>
 
@@ -33,22 +35,51 @@
                 <span class="image-desc">{{imageList[3*i+1].Title}}</span><br>
                 <span class="image-desc">{{imageList[3*i+1].author}}</span><br>
             </div>
+<div class="body" >
+<div *ngIf= "imageList"  class="cards-list">
+    <div *ngFor = "let i of rowIndexArray">
+        <div *ngIf= "imageList[3*i]" (click)="simpleAlert(imageList[3*i].Story,imageList[3*i].Title,imageList[3*i].imageUrl,imageList[3*i].author)" class="t">
+            <div class="card 1">
+                <div class="card_image"> <img [src]= "imageList[3*i].imageUrl" class="img-fluid"> </div>
+                <div class="card_title title-white">
+                  <p class="p-title">Title: {{imageList[3*i].Title}}</p>  
+                  <p>Catergoy: {{imageList[3*i].category}}</p>
+                  <p>Author: {{imageList[3*i].author}}</p>
+                </div>
+              </div>
             </div>
-        </td>
-        <td *ngIf= "imageList[3*i+2]">
-            <div class="imagebox" (click)="simpleAlert(imageList[3*i+2].Story,imageList[3*i+2].Title,imageList[3*i+2].imageUrl)">
-                <div class="content">
-                <img [src]= "imageList[3*i+2].imageUrl" class="img-fluid"><br>
-                <span class="image-desc">{{imageList[3*i+2].category}}</span><br>
-                <span class="image-desc">{{imageList[3*i+2].Title}}</span><br>
-                <span class="image-desc">{{imageList[3*i+2].author}}</span>
+        <div *ngIf= "imageList[3*i+1]" class="t">
+            <div (click)="simpleAlert(imageList[3*i+1].Story,imageList[3*i+1].Title,imageList[3*i+1].imageUrl,imageList[3*i+1].author)">
+                <div class="card 1">
+                    <div class="card_image"> <img [src]= "imageList[3*i+1].imageUrl" class="img-fluid"> </div>
+                    <div class="card_title title-white">
+                      <p class="p-title">Title: {{imageList[3*i+1].Title}}</p>
+                      <p>Category: {{imageList[3*i+1].category}}</p>
+                      <p>Author: {{imageList[3*i+1].author}}</p>
+                    </div>
+                  </div>
             </div>
+        </div>
+        <div *ngIf= "imageList[3*i+2]" class="t">
+            <div (click)="simpleAlert(imageList[3*i+2].Story,imageList[3*i+2].Title,imageList[3*i+2].imageUrl,imageList[3*i+2].author)">
+                <div class="card 1">
+                    <div class="card_image"> <img [src]= "imageList[3*i+2].imageUrl" class="img-fluid"> </div>
+                    <div class="card_title title-white">
+                      <p class="p-title">Category: {{imageList[3*i+2].category}}</p>
+                      <p>Title: {{imageList[3*i+2].Title}}</p>
+                      <p>Author: {{imageList[3*i+2].author}}</p>
+                    </div>
+                  </div>
             </div>
         </td>
     </tr>
 </table>
 
 
+        </div>
+    </div>
+</div>
+</div>
 
 
 

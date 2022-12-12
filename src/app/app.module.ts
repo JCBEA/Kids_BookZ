@@ -30,6 +30,8 @@ import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 import {NgConfirmModule} from 'ng-confirm-box';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ToonsComponent } from "./toons/ToonsComponent";
+
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
 
 
@@ -52,6 +54,7 @@ import { CategoryFableComponent } from './Books/category-fable/category-fable.co
     BookListComponent,
     AdminSidenavComponent,
     DeleteBookComponent,
+    ToonsComponent,
     CategoryFableComponent,
   ],
   imports: [

@@ -34,9 +34,6 @@ import { UpdatePassComponent } from './update-pass/update-pass.component';
 import {NgConfirmModule} from 'ng-confirm-box';
 import { MatDialogModule } from '@angular/material/dialog';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
-  
-import {NgConfirmModule} from 'ng-confirm-box';
-import { MatDialogModule } from '@angular/material/dialog';
 import { ToonsComponent } from "./toons/ToonsComponent";
 
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';

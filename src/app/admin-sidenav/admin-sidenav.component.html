@@ -10,13 +10,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
 <body>
-<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:15%">
-  <a routerLink="/admin-page" class="w3-bar-item w3-button">HOME</a> 
-  <a routerLink="/Books/upload" class="w3-bar-item w3-button">ADD BOOKS</a> 
-  <a routerLink="/delete-book" class="w3-bar-item w3-button">DELETE BOOK</a> 
-  <a routerLink="/update-pass" class="w3-bar-item w3-button">UPDATE PASSWORD</a>
-  <a class="w3-bar-item w3-button" (click)="signOut()"style="margin-top:250%">LOGOUT</a> 
-</div>
+
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxs-book'></i>
@@ -36,7 +30,7 @@
           </a>
         </li>
         <li>
-          <a href="#">
+          <a routerLink="/delete-book">
             <i class='bx bxs-trash-alt'></i>
             <a routerLink="/delete-book">Delete</a>
           </a>
@@ -44,7 +38,7 @@
         <li>
           <a href="#">
             <i class='bx bx-reset'></i>
-            <a routerLink="/delete-book">Reset Password</a>
+            <a routerLink="/update-pass">Reset Password</a>
           </a>
         </li>
         <li class="log_out">

@@ -18,6 +18,8 @@ import { DashboardContentComponent } from './dashboard-content/dashboard-content
 import { UserDirectComponent } from './user-direct/user-direct.component';
 
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -29,8 +31,8 @@ import { DeleteBookComponent } from './delete-book/delete-book.component';
 
 import {NgConfirmModule} from 'ng-confirm-box';
 import { MatDialogModule } from '@angular/material/dialog';
+import { ToonsComponent } from "./toons/ToonsComponent";
   
-
 
 
 @NgModule({
@@ -43,11 +45,15 @@ import { MatDialogModule } from '@angular/material/dialog';
     DashboardContentComponent,
     UserDirectComponent,
     AboutUsComponent,
+    ContactUsComponent,
+
+
     BooksComponent,
     AddBookComponent,
     BookListComponent,
     AdminSidenavComponent,
     DeleteBookComponent,
+    ToonsComponent,
   ],
   imports: [
   MatDialogModule,

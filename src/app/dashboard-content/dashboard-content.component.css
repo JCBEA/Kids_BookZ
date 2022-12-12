@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap');
+
 .body{
    background-image: url("/assets/images/bg.gif");
    background-size:cover;  
@@ -7,4 +9,39 @@
    height: 100%;
    width: 100%;
    margin: 0;
+   justify-content: center;
+   
 }
+
+h1{
+   font-family:Verdana, poppins , Tahoma, sans-serif;
+   font-size: 50px;
+   font-weight:bolder;
+   text-align: center;
+   color: hsl(41, 100%, 50%);
+   letter-spacing: 5px;   
+}
+
+h1:hover{
+   color: rgb(255, 200, 0);
+   text-shadow: 0 0 10px rgb(169, 169, 169)
+   
+}
+p{
+   font-size: 30px;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   color: rgb(6, 29, 115);
+   text-align: center;
+   font-weight: bold;
+
+}
+.content{
+   
+   border-width: 50%;
+   margin-top:5%;
+   
+}
+
+
+
+

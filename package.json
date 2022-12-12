@@ -27,6 +27,7 @@
     "ng-confirm-box": "^0.0.6",
     "ng-modal": "^1.0.2",
     "rxjs": "~7.5.0",
+    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.6.15",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

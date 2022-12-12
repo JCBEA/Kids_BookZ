@@ -113,31 +113,7 @@ nav .sidebar-button i{
   width: 100%;
   margin: 0 20px;
 }
-nav .search-box input{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  background: #F5F6FA;
-  border: 2px solid #EFEEF1;
-  border-radius: 6px;
-  font-size: 18px;
-  padding: 0 15px;
-}
-nav .search-box .bx-search{
-  position: absolute;
-  height: 40px;
-  width: 40px;
-  background: #2697FF;
-  right: 5px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 4px;
-  line-height: 40px;
-  text-align: center;
-  color: #fff;
-  font-size: 22px;
-  transition: all 0.4 ease;
-}
+
 .home-section nav .profile-details{
   display: flex;
   align-items: center;

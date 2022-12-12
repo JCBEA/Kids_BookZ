@@ -4,6 +4,7 @@ import { Database, ref, set, update, remove,query,orderByChild,equalTo} from '@a
 import Swal from 'sweetalert2'
 import { CustomProvider } from '@angular/fire/app-check';
 import { style } from '@angular/animations';
+import { idToken } from '@angular/fire/auth';
 
 @Component({
   selector: 'app-image-list',
@@ -31,24 +32,41 @@ export class BookListComponent implements OnInit {
 
   
   
-  simpleAlert(value:any, id:any,img:any){
+  simpleAlert(value:any, title:any,img:any,author:any){
     Swal.fire({
-      title: value,
-      width: 1200,
+      title: title,
+      text: author,
+      width: 500,
       padding: '20px',
       imageUrl: img,
       imageWidth: 200,
       imageHeight: 200,
-      iconHtml: id,
-      icon: 'question',
       color: 'black',
       imageAlt: 'Custom image',
-      confirmButtonText: 'Done',
+      confirmButtonText: 'STORY',
       background:'url("../../../assets/images/BGBGBG.png")' ,
       backdrop: `
       url("../../../assets/images/download.gif")
-    `
+    `    
       
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({    
+          title: value,
+          text: author,
+          width: 1200,
+          padding: '20px',
+          imageUrl: img,
+          imageWidth: 200,
+          imageHeight: 200,
+          color: 'black',
+          imageAlt: 'Custom image',
+          confirmButtonText: 'Done',
+          background:'url("../../../assets/images/BGBGBG.png")' ,
+          backdrop: `
+          url("../../../assets/images/download.gif")
+        `    })
+      }
     })
     
   }

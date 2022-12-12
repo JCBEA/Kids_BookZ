@@ -31,6 +31,8 @@ import { DeleteBookComponent } from './delete-book/delete-book.component';
 
 import {NgConfirmModule} from 'ng-confirm-box';
 import { MatDialogModule } from '@angular/material/dialog';
+import { UpdatePassComponent } from './update-pass/update-pass.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
   
 
 
@@ -52,6 +54,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     BookListComponent,
     AdminSidenavComponent,
     DeleteBookComponent,
+    UpdatePassComponent,
+    VerifyEmailComponent,
   ],
   imports: [
   MatDialogModule,

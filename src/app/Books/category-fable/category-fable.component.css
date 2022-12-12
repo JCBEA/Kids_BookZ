@@ -1,16 +1,15 @@
-.bg{
-    min-width: 100vh;
+.body{
+    background-image: url("../../../assets/images/bg.gif");
+    background-size:cover;  
+    background-position: center center;
     min-height: 100vh;
-    height: 130vh;
+    min-width: 100vh;
+    height: 100%;
     width: 100%;
     margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    background: linear-gradient(to right, #b92b27, #1565c0);
-    overflow-y: auto;
-}
+ }
 
-.box{
+ .imagebox{
     border: 1px solid #222;
 
     box-shadow: 1px 1px 40px #9803ee,
@@ -18,22 +17,21 @@
      animation: anime 1s Linear infinite;
     box-sizing: border-box;
     margin: 2rem;
-    height: 250px auto;
-     width: 250px auto;
+    height: 230px;
+    width: 200px;
     float: left;
     color: white;
     background-color: #000000;
     border-radius: 10px;
     transition: 0.003s;
     cursor: pointer;
+    text-align: center;
 }
-.box:hover{
+.imagebox:hover{
     color: white;
     background-color: #141414;
     box-shadow: 1px 1px 20px #00ccff,
                    1px 1px 40px #9803ee;
-     
- 
 }
 img{
     border: 1px solid rgb(0, 0, 0);
@@ -42,17 +40,16 @@ img{
      animation: anime 1s Linear infinite;
      height: 150px;
      width: 150px;
+     border-radius: 30px;
 }   
-.imagebox{
-    margin-top: 15px;
-    width: 150px;
-    height: 220px;
-    border-radius: 10px;
-    justify-content: center;
-}
 .set{
     font-weight:bolder;
 }
-.image-desc{
-  text-align: center;
+.content{
+    margin-top: 15px;
 }
+
+.swal2-title {
+    font-family:'Montserrat', sans-serif;
+    color: #00d9ff;
+  }

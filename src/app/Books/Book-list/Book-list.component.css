@@ -1,3 +1,4 @@
+
 .body{
     background-image: url("../../../assets/images/bg.gif");
     background-size:cover;  
@@ -75,3 +76,8 @@
   }
   
   
+img{
+    height: 300px;
+    width: 300px;
+}
+

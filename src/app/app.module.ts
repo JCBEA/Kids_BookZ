@@ -35,7 +35,6 @@ import { ToonsComponent } from "./toons/ToonsComponent";
 
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,

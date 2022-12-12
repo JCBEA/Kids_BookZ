@@ -2,6 +2,39 @@
 <div class="body" >
 
 <app-header></app-header>
+<br><br><br><br>
+
+
+<form>
+	<div class="mb-3 row">
+		<div class="col-xs-3 col-sm-auto">
+			<input id="table-filtering-search" class="form-control" type="text" [formControl]="rowIndexArray" placeholder="Search">
+		</div>
+	</div>
+    </form>
+
+
+<table *ngIf= "imageList">
+    <br>
+    <tr *ngFor = "let i of rowIndexArray">
+        <td *ngIf= "imageList[3*i]">
+            <div class="imagebox" (click)="simpleAlert(imageList[3*i].Story,imageList[3*i].Title,imageList[3*i].imageUrl)">
+                <div class="content">
+                <img [src]= "imageList[3*i].imageUrl" class="img-fluid"><br>
+                <span class="image-desc">{{imageList[3*i].category}}</span><br>
+                <span class="image-desc">{{imageList[3*i].Title}}</span><br>
+                <span class="image-desc">{{imageList[3*i].author}}</span> 
+            </div>
+            </div>
+        </td>
+        <td *ngIf= "imageList[3*i+1]">
+            <div class="imagebox" (click)="simpleAlert(imageList[3*i+1].Story,imageList[3*i+1].Title,imageList[3*i+1].imageUrl)">
+                <div class="content">
+                <img [src]= "imageList[3*i+1].imageUrl" class="img-fluid"><br>
+                <span class="image-desc">{{imageList[3*i+1].category}}</span><br>
+                <span class="image-desc">{{imageList[3*i+1].Title}}</span><br>
+                <span class="image-desc">{{imageList[3*i+1].author}}</span><br>
+            </div>
 <div class="body" >
 <div *ngIf= "imageList"  class="cards-list">
     <div *ngFor = "let i of rowIndexArray">
@@ -38,6 +71,11 @@
                     </div>
                   </div>
             </div>
+        </td>
+    </tr>
+</table>
+
+
         </div>
     </div>
 </div>

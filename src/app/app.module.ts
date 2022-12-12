@@ -18,6 +18,8 @@ import { DashboardContentComponent } from './dashboard-content/dashboard-content
 import { UserDirectComponent } from './user-direct/user-direct.component';
 
 import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
@@ -26,10 +28,12 @@ import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
-import { EditBookComponent } from './edit-book/edit-book.component';
 
-  
+import {NgConfirmModule} from 'ng-confirm-box';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ToonsComponent } from "./toons/ToonsComponent";
 
+import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
 
 @NgModule({
   declarations: [
@@ -41,15 +45,20 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     DashboardContentComponent,
     UserDirectComponent,
     AboutUsComponent,
+    ContactUsComponent,
+
+
     BooksComponent,
     AddBookComponent,
     BookListComponent,
     AdminSidenavComponent,
     DeleteBookComponent,
-    EditBookComponent,
-    
+    ToonsComponent,
+    CategoryFableComponent,
   ],
   imports: [
+  MatDialogModule,
+   NgConfirmModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
@@ -59,7 +68,7 @@ import { EditBookComponent } from './edit-book/edit-book.component';
     AngularFireStorageModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideDatabase(() => getDatabase()),
-    provideAuth(() => getAuth())
+    provideAuth(() => getAuth()),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,7 +15,7 @@ import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
-
+import { ToonsComponent } from './toons/ToonsComponent';
 
 
 const routes: Routes = [
@@ -37,7 +37,7 @@ const routes: Routes = [
   {path:'user-direct', component: UserDirectComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'delete-book', component: DeleteBookComponent},
-  
+  {path: 'toons', component: ToonsComponent},
 ];
 
 @NgModule({

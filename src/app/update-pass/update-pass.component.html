@@ -1,0 +1,16 @@
+<div class="bgs">
+<app-admin-sidenav></app-admin-sidenav>
+
+<div class="container">
+  
+    <div class="mb-4">
+        <h5>Forgot Password?</h5>
+      </div>
+    <div class="mb-3">
+     <p>Email</p>
+      <input type="email" id="email" class="form-control" name="email" [(ngModel)]="email" placeholder="Enter your Email">
+    </div>
+    <div class="mb-3 d-grid"><br>
+      <button type="submit" (click)="sendlink()" class="btn btn-info"> Reset Password </button>
+    </div>
+

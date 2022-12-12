@@ -1,6 +1,17 @@
 <div class="body" >
 <app-header></app-header>
-<br><br>
+<br><br><br><br>
+
+
+<form>
+	<div class="mb-3 row">
+		<div class="col-xs-3 col-sm-auto">
+			<input id="table-filtering-search" class="form-control" type="text" [formControl]="rowIndexArray" placeholder="Search">
+		</div>
+	</div>
+    </form>
+
+
 <table *ngIf= "imageList">
     <br>
     <tr *ngFor = "let i of rowIndexArray">
@@ -36,7 +47,7 @@
         </td>
     </tr>
 </table>
-</div>
+
 
 
 

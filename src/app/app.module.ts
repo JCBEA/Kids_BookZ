@@ -28,10 +28,11 @@ import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { AdminSidenavComponent } from './admin-sidenav/admin-sidenav.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
+import { UpdatePassComponent } from './update-pass/update-pass.component';
+
 
 import {NgConfirmModule} from 'ng-confirm-box';
 import { MatDialogModule } from '@angular/material/dialog';
-import { UpdatePassComponent } from './update-pass/update-pass.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
   
 
@@ -56,6 +57,8 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
     DeleteBookComponent,
     UpdatePassComponent,
     VerifyEmailComponent,
+
+
   ],
   imports: [
   MatDialogModule,

@@ -1,15 +1,74 @@
 <!DOCTYPE html>
-<html>
-<title>W3.CSS</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <link rel="stylesheet" href="admin-sidenav.component.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
 <body>
-<div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:15%">
-  <a routerLink="/admin-page" class="w3-bar-item w3-button">HOME</a> 
-  <a routerLink="/Books/upload" class="w3-bar-item w3-button">ADD BOOKS</a> 
-  <a routerLink="/delete-book" class="w3-bar-item w3-button">DELETE BOOK</a> 
-  <a class="w3-bar-item w3-button" (click)="signOut()"style="margin-top:250%">LOGOUT</a> 
-</div>
+
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx bxs-book'></i>
+      <span class="logo_name">Kid Book Zone</span>
+    </div>
+      <ul class="nav-links">
+        <li>
+          <a href="#">
+            <i class='bx bxs-home'></i>
+            <a routerLink="/admin-page">Home</a>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxs-book-add'></i>
+            <a routerLink="/Books/upload">Add Books</a>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bxs-trash-alt'></i>
+            <a routerLink="/delete-book">Delete</a>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-reset'></i>
+            <a routerLink="/update-pass">Reset Password</a>
+          </a>
+        </li>
+        <li class="log_out">
+          <a href="#">
+            <i class='bx bx-log-out'></i>
+            <a (click)="signOut()">Log out</a>
+          </a>
+        </li>
+      </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+    </nav>
+  </section>
+
+  <script>
+   let sidebar = document.querySelector(".sidebar");
+let sidebarBtn = document.querySelector(".sidebarBtn");
+sidebarBtn.onclick = function() {
+  sidebar.classList.toggle("active");
+  if(sidebar.classList.contains("active")){
+  sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+}else
+  sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+}
+ </script>
 </body>
 </html>
+

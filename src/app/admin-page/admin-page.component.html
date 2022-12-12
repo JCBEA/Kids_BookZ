@@ -1,17 +1,1 @@
-<div class="adminbg">
-
-    <div class="addbooks">
-       
-        <form #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
-            <h1>Add Book</h1>
-            <input type="text" ngModel id="username" name="title" placeholder="title" /><br>
-            <p>story</p>
-            <textarea id="tutorial" ngModel name="story" rows="5" cols="40"></textarea><br><br>
-            <input type="date" ngModel id="published" name="published" placeholder="published" />
-            <input type="text" ngModel id="author" name="author" placeholder="author" />
-            <input type="submit" id="saveData" name="signup_submit" value="Add" />
-        </form>
-    </div>
-<input type="submit" (click)="signOut()" value="Logout">
-</div>
-
+<app-admin-sidenav></app-admin-sidenav>

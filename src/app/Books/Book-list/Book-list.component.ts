@@ -3,6 +3,7 @@ import { ImageService } from 'src/app/shared/image.service';
 import { Database, ref, set, update, remove,query,orderByChild,equalTo} from '@angular/fire/database';
 import Swal from 'sweetalert2'
 import { CustomProvider } from '@angular/fire/app-check';
+import { style } from '@angular/animations';
 
 @Component({
   selector: 'app-image-list',
@@ -22,6 +23,9 @@ export class BookListComponent implements OnInit {
       this.service.getbookDetails();  
       }
     ); 
+
+
+    
   }
 
 
@@ -40,14 +44,17 @@ export class BookListComponent implements OnInit {
       color: 'black',
       imageAlt: 'Custom image',
       confirmButtonText: 'Done',
-      background: 'url("../../../assets/images/newgif.gif")'
+      background:'url("../../../assets/images/BGBGBG.png")' ,
+      backdrop: `
+      url("../../../assets/images/download.gif")
+    `
+      
     })
     
-
-    
-
-    
   }
+
+  
+
   
   
 }

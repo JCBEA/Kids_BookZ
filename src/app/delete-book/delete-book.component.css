@@ -7,6 +7,7 @@
     padding: 0;
     font-family: sans-serif;
     background: linear-gradient(to right, #b92b27, #1565c0);
+    overflow-y: auto;
 }
 
 .box{
@@ -17,8 +18,8 @@
      animation: anime 1s Linear infinite;
     box-sizing: border-box;
     margin: 2rem;
-    height: 250px;
-     width: 250px;
+    height: 250px auto;
+     width: 250px auto;
     float: left;
     color: white;
     background-color: #000000;
@@ -51,4 +52,7 @@ img{
 }
 .set{
     font-weight:bolder;
+}
+.image-desc{
+  text-align: center;
 }

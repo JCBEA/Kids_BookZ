@@ -16,6 +16,7 @@ export class BookListComponent implements OnInit {
   rowIndexArray: any = [];
   constructor(private service: ImageService,public database: Database) { }
   
+
   ngOnInit(){
     this.service.bookDetails.snapshotChanges().subscribe(
       list => {

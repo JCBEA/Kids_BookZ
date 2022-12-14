@@ -14,9 +14,12 @@ import { BooksComponent } from './Books/Books.component';
 import { AddBookComponent } from './Books/addBook/AddBook.component';
 import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
+import { UpdatePassComponent } from './update-pass/update-pass.component';
+import { VerifyEmailComponent } from './verify-email/verify-email.component';
+
+
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
-
-
+import { ToonsComponent } from './toons/ToonsComponent';
 
 const routes: Routes = [
   { path: '', redirectTo: 'user-direct', pathMatch: 'full' },
@@ -30,6 +33,8 @@ const routes: Routes = [
   {path: 'admin-login', component: AdminLoginComponent},
   {path: 'admin-page', component: AdminPageComponent},
   {path: 'contact-us', component: ContactUsComponent},
+  {path: 'update-pass', component: UpdatePassComponent},
+  {path: 'verify-email', component: VerifyEmailComponent},
 
   { path:'user-direct', component: UserDirectComponent},
   { path: '',redirectTo:'user-direct', pathMatch:'full'},
@@ -37,7 +42,7 @@ const routes: Routes = [
   {path:'user-direct', component: UserDirectComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'delete-book', component: DeleteBookComponent},
-  
+  {path: 'toons', component: ToonsComponent},
 ];
 
 @NgModule({
@@ -47,5 +52,6 @@ const routes: Routes = [
 export class AppRoutingModule { }
 
 
-export const routingComponent = [DashboardComponent, AdminLoginComponent, AdminPageComponent, UserDirectComponent, ContactUsComponent]
+export const routingComponent = [DashboardComponent, AdminLoginComponent, AdminPageComponent, UserDirectComponent, ContactUsComponent,UpdatePassComponent]
+
 

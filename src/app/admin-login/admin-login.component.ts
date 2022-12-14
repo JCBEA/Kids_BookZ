@@ -23,7 +23,7 @@ export class AdminLoginComponent implements OnInit {
   }
 
    registerUser(value: any) {
-  signInWithEmailAndPassword(this.auth, value.email, value.password)
+   signInWithEmailAndPassword(this.auth, value.email, value.password)
   .then((userCredential)=>{
     const user = userCredential.user;
     const date = new Date();

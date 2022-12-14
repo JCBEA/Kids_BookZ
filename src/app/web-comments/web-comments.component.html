@@ -1,0 +1,41 @@
+<div class="bgc">
+<app-admin-sidenav></app-admin-sidenav>
+<br><br><br><br><br><br><br>
+<ul style=" margin-left: 30rem;">
+    <div *ngIf= "imageList"  class="cards-list">
+        <div *ngFor = "let i of rowIndexArray">
+            <div *ngIf= "imageList[3*i]">
+                <div class="card 1">
+                    <div class="card_title title-white">
+                        <p class="p-title">Name: {{imageList[3*i].name}}</p>
+                        <p class="p-title">Email: {{imageList[3*i].Email}}</p>
+                        <p>Comment: {{imageList[3*i].comment}}</p>
+                    </div>
+                  </div>
+                </div>
+            <div *ngIf= "imageList[3*i+1]" class="t">
+                <div>
+                    <div class="card 1">
+                        <div class="card_title title-white">
+                            <p class="p-title">Name :{{imageList[3*i+1].name}}</p>
+                            <p class="p-title">Email :{{imageList[3*i+1].Email}}</p>
+                            <p>Comment: {{imageList[3*i+1].comment}}</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+            <div *ngIf= "imageList[3*i+2]" class="t">
+                <div>
+                    <div class="card 1">
+                        <div class="card_title title-white">
+                            <p class="p-title">Name: {{imageList[3*i+2].name}}</p>
+                          <p class="p-title">Email: {{imageList[3*i+2].Email}}</p>
+                          <p>Comment: {{imageList[3*i+2].comment}}</p>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </ul>
+</div>  

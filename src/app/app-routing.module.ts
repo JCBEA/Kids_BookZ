@@ -16,6 +16,7 @@ import { BookListComponent } from './Books/Book-list/Book-list.component';
 import { DeleteBookComponent } from './delete-book/delete-book.component';
 import { UpdatePassComponent } from './update-pass/update-pass.component';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { WebCommentsComponent } from './web-comments/web-comments.component';
 
 
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
@@ -38,6 +39,7 @@ const routes: Routes = [
 
   { path:'user-direct', component: UserDirectComponent},
   { path: '',redirectTo:'user-direct', pathMatch:'full'},
+  { path:'comments', component: WebCommentsComponent},
 
   {path:'user-direct', component: UserDirectComponent},
   {path: 'about-us', component: AboutUsComponent},

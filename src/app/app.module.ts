@@ -37,6 +37,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
 import { ToonsComponent } from "./toons/ToonsComponent";
 
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
+import { DonateComponent } from './donate/donate.component';
 
 @NgModule({
   declarations: [
@@ -62,6 +63,7 @@ import { CategoryFableComponent } from './Books/category-fable/category-fable.co
 
     ToonsComponent,
     CategoryFableComponent,
+    DonateComponent,
   ],
   imports: [
 

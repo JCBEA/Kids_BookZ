@@ -20,6 +20,7 @@ import { VerifyEmailComponent } from './verify-email/verify-email.component';
 
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
 import { ToonsComponent } from './toons/ToonsComponent';
+import { DonateComponent } from './donate/donate.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'user-direct', pathMatch: 'full' },
@@ -35,6 +36,7 @@ const routes: Routes = [
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'update-pass', component: UpdatePassComponent},
   {path: 'verify-email', component: VerifyEmailComponent},
+  
 
   { path:'user-direct', component: UserDirectComponent},
   { path: '',redirectTo:'user-direct', pathMatch:'full'},
@@ -43,6 +45,7 @@ const routes: Routes = [
   {path: 'about-us', component: AboutUsComponent},
   {path: 'delete-book', component: DeleteBookComponent},
   {path: 'toons', component: ToonsComponent},
+  {path: 'donate', component:DonateComponent},
 ];
 
 @NgModule({

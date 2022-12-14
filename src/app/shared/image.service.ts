@@ -23,4 +23,5 @@ export class ImageService {
       this.firebase.object('/bookDetails/'+`${payload.id}`).update(payload)
     })
   }
+
 }

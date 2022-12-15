@@ -4,6 +4,7 @@ import { Database, ref, set} from '@angular/fire/database';
 import { Auth, createUserWithEmailAndPassword, linkWithRedirect, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { NgConfirmService } from 'ng-confirm-box';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import Swal from 'sweetalert2'
 @Component({
   selector: 'app-admin-sidenav',
@@ -13,8 +14,7 @@ import Swal from 'sweetalert2'
 export class AdminSidenavComponent implements OnInit {
 
   constructor(public auth: Auth, public database: Database,
-    private route: Router, private service: ImageService, private confirmService: NgConfirmService) { }
-
+    private route: Router, private service: ImageService, private confirmService: NgConfirmService, public afAuth: AngularFireAuth) { }
   ngOnInit(): void {
   }
 

@@ -34,9 +34,9 @@ import { UpdatePassComponent } from './update-pass/update-pass.component';
 import {NgConfirmModule} from 'ng-confirm-box';
 import { MatDialogModule } from '@angular/material/dialog';
 import { VerifyEmailComponent } from './verify-email/verify-email.component';
-import { ToonsComponent } from "./toons/ToonsComponent";
 
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
+import { VtoonsComponent } from './vtoons/vtoons.component';
 import { DonateComponent } from './donate/donate.component';
 import { WebCommentsComponent } from './web-comments/web-comments.component';
 
@@ -63,8 +63,8 @@ import { WebCommentsComponent } from './web-comments/web-comments.component';
     VerifyEmailComponent,
 
 
-    ToonsComponent,
     CategoryFableComponent,
+    VtoonsComponent,
     DonateComponent,
     WebCommentsComponent,
   ],

@@ -31,16 +31,16 @@
       <form [formGroup]= "formTemplate" #RegisterForm="ngForm" (ngSubmit)="registerUser(RegisterForm.value)">
         <div class="input-box">
           <input type="text" ngModel id="name" name="name" formControlName="name" placeholder="Enter your name">
-          <div class="text-danger" *ngIf= "isSubmitted && formControls.name.errors?.['required']">This field is required</div>
-        </div>
+          <div class="text-danger" *ngIf= "isSubmitted && formControls.name.errors?.['required']">This field is required</div><br>
+        </div><br>
         <div class="input-box">
           <input type="email"  ngModel id="email" name="email" formControlName="email" placeholder="Enter your email">
-          <div class="text-danger" *ngIf= "isSubmitted && formControls.email.errors?.['required']">This field is required</div>
-        </div>
+          <div class="text-danger" *ngIf= "isSubmitted && formControls.email.errors?.['required']">This field is required</div><br>
+        </div><br>
         <div class="input-box message-box">
           <textarea  ngModel id="comment" name="comment" cols="30" rows="10" formControlName="comment" placeholder="Enter your Message"></textarea>
           <div class="text-danger" *ngIf= "isSubmitted && formControls.comment.errors?.['required']">This field is required</div>
-        </div>
+        </div><br>
         <div class="button">
           <button type="submit" class="button-86" role="button">Comment</button>
         </div>

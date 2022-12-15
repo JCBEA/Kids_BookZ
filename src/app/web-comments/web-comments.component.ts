@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Database, ref, set, update, remove} from '@angular/fire/database';
 import { AngularFireList, AngularFireDatabase } from '@angular/fire/compat/database';
-import { Observable } from 'rxjs';
+import { ImageService } from 'src/app/shared/image.service';
+import { NgConfirmService } from 'ng-confirm-box';
+import Swal from 'sweetalert2';
+
 
 @Component({
   selector: 'app-web-comments',
@@ -11,7 +15,7 @@ export class WebCommentsComponent implements OnInit {
   imageList: any = [];
   rowIndexArray: any = [];
   comments!: AngularFireList<any>;
-  constructor(private db: AngularFireDatabase) {
+  constructor(private db: AngularFireDatabase, private service: ImageService, private confirmService: NgConfirmService, public database: Database) {
   }
   ngOnInit(): void {
     this.db.list('Comments').snapshotChanges().subscribe(
@@ -23,11 +27,29 @@ export class WebCommentsComponent implements OnInit {
     );
 
   }
-
   getbookDetails() {
     this.comments = this.db.list('Comments')
   }
 
+  registerUser(value: any){
+    this.confirmService.showConfirm("WANT TO DELETE?????????????",
+     () => {
+      remove(ref(this.database, 'Comments/' + value));
+      Swal.fire({    
+        title: 'Comment Successfuly Deleted',
+        icon:'success',
+        color: 'black',
+        confirmButtonText: 'Done',
+        position: 'top-right'
+    })
+    }, 
+
+    () => {
+      //cancel
+    })
+  }
+
+  
  
 
   

@@ -20,8 +20,8 @@ import { WebCommentsComponent } from './web-comments/web-comments.component';
 
 
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
-import { ToonsComponent } from './toons/ToonsComponent';
 import { DonateComponent } from './donate/donate.component';
+import { VtoonsComponent } from './vtoons/vtoons.component';
 
 
 const routes: Routes = [
@@ -47,8 +47,8 @@ const routes: Routes = [
   {path:'user-direct', component: UserDirectComponent},
   {path: 'about-us', component: AboutUsComponent},
   {path: 'delete-book', component: DeleteBookComponent},
-  {path: 'toons', component: ToonsComponent},
   {path: 'donate', component:DonateComponent},
+  {path: 'toons', component:VtoonsComponent},
 ];
 
 @NgModule({

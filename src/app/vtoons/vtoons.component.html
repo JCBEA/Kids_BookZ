@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <link rel="stylesheet" href="vtoons.component.css">
+</head>
+<body>
+
+<app-header></app-header>
+
+<h3 class="heading"> Toons </h3>
+    <div class="container">
+        <div class="main-video">
+            <div class="video">
+
+                <video src="../../assets/videos/macdonals.mp4" controls muted autoplay></video>
+                <h3 class="title">Old Macdonals| Cocomelon</h3>
+            </div>
+        </div>
+        <div class="video-list">
+            <div class="vid activate">
+
+                <video src="../../assets/videos/macdonals.mp4" muted></video>
+                <h3 class="title">Old Macdonals| Cocomelon</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/wheels.mp4" muted></video>
+                <h3 class="title">Wheels on the Bus| Cocomelon</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/shopping.mp4" muted></video>
+                <h3 class="title">Peppa Pig| Shopping</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/lunch.mp4" muted></video>
+                <h3 class="title">Peppa Pig| Lunch</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/pirate.mp4" muted></video>
+                <h3 class="title">Peppa Pig| Danny's Pirate Bedroom</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/canoe.mp4" muted></video>
+                <h3 class="title">Peppa Pig| Canoe Trip</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/party.mp4" muted></video>
+                <h3 class="title">Ben and Holly's Little Kingdom| The Party</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/super.mp4" muted></video>
+                <h3 class="title">Ben and Holly's Little Kingdom| Superhero</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/christmas.mp4" muted></video>
+                <h3 class="title">Time for Christmas with Duggee| Hey Duggee</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/puppies.mp4" muted></video>
+                <h3 class="title">Time for Puppies| Hey Duggee</h3>
+            </div>
+            <div class="vid">
+                <video src="../../assets/videos/cook.mp4" muted></video>
+                <h3 class="title">Cook with Duggee| Hey Duggee</h3>
+            </div>
+        </div>
+    </div>
+
+<script>
+    let listVideo = document.querySelectorAll('.video-list .vid');
+    let mainVideo = document.querySelector('.main-video video');
+    let title = document.querySelector('.main-video .title');
+
+    listVideo.forEach(video =>{
+        video.onclick = () =>{
+            listVideo.forEach(vid => vid.classList.remove('activate'));
+            video.classList.add('activate');
+            if(video.classList.contains('activate')){
+                let src = video.children[0].getAttribute('src');
+                mainVideo.src = src;
+                let text = video.children[1].innerHTML;
+                title.innerHTML = text;
+            };
+        }
+    });
+</script>
+
+</body>
+</html>

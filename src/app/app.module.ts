@@ -38,6 +38,8 @@ import { ToonsComponent } from "./toons/ToonsComponent";
 
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
 import { VtoonsComponent } from './vtoons/vtoons.component';
+import { DonateComponent } from './donate/donate.component';
+import { WebCommentsComponent } from './web-comments/web-comments.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { VtoonsComponent } from './vtoons/vtoons.component';
     ToonsComponent,
     CategoryFableComponent,
     VtoonsComponent,
+    DonateComponent,
+    WebCommentsComponent,
   ],
   imports: [
 

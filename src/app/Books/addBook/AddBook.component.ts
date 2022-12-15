@@ -6,6 +6,7 @@ import { ImageService } from 'src/app/shared/image.service';
 import { Database, ref, set} from '@angular/fire/database';
 import { Auth, createUserWithEmailAndPassword, linkWithRedirect, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2'
 @Component({
   selector: 'app-image',
   templateUrl: './AddBook.component.html',
@@ -59,7 +60,13 @@ isSubmitted: boolean | undefined;
           })
         })
       ).subscribe();
-      alert("--Published Successfully!!--")
+      Swal.fire({    
+        title: 'Published Successfuly',
+        icon:'success',
+        color: 'black',
+        confirmButtonText: 'Done',
+        position: 'top-right'
+    })
     }
   }
 

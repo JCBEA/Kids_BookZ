@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
+    authInfo$: any;
 
   constructor(private fireauth: AngularFireAuth, private router: Router) {}
 

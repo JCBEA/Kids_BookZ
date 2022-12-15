@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+var name: any;
 @Component({
   selector: 'app-vtoons',
   templateUrl: './vtoons.component.html',
@@ -10,6 +10,7 @@ export class VtoonsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    new name();
   }
 
 }

@@ -3,6 +3,7 @@ import { Auth, createUserWithEmailAndPassword, linkWithRedirect, signInWithEmail
 import { Database, set, ref, update } from '@angular/fire/database';
 import { Router } from '@angular/router';
 import { routingComponent } from '../app-routing.module'; 
+import Swal from 'sweetalert2'
 
 
 @Component({
@@ -30,7 +31,12 @@ export class AdminLoginComponent implements OnInit {
     update(ref(this.database, 'users/' + user.uid),{
       last_login: date
     });
-    alert('Login Successful --Hi! Admin--')
+    Swal.fire({    
+      title: ' Hi!!!, Admin',
+      icon:'success',
+      color: 'black',
+      confirmButtonText: 'Done'
+  })
     this.route.navigate(['/admin-page'])
 
   })

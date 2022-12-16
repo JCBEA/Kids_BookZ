@@ -158,8 +158,6 @@ h1{
     font-weight: 500;
 }
 
-/*Hover-Section*/
-
 .Team li a:hover, .Team li a:hover img, .Team li a:hover span, .Team li a:hover+ul li a {
     background: skyblue;
     color: #000;

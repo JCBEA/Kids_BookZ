@@ -1,6 +1,7 @@
 
 
 
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
 * {
     box-sizing: border-box;
@@ -468,3 +469,17 @@ img {
         display: none;
     }
 }
+.body{
+    background: linear-gradient(to right, #b92b27, #1565c0);
+}
+.content{
+    position:absolute;
+    margin-top: 10%;
+    padding-left: 15%;
+}
+@media all and (max-width: 50px) {
+    .content {
+      /* On small screens, we are no longer using row direction but column */
+      flex-direction: column;
+    }
+  }

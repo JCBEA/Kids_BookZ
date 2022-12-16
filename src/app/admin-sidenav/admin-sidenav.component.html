@@ -62,6 +62,8 @@
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
         <span class="dashboard">Dashboard</span>
+        <span *ngIf="(afAuth.user | async)" class="add">Hi!, Admin</span>
+        <span *ngIf="!(afAuth.user | async)" class="add">Admin, logged Out</span>
       </div>
     </nav>
   </section>

@@ -1,6 +1,6 @@
 
+<app-header></app-header>
 <div class="body" >
-    <app-header></app-header>
     <div *ngIf= "imageList"  class="cards-list">
         <div *ngFor = "let i of rowIndexArray">
             <div *ngIf= "imageList[3*i]" (click)="simpleAlert(imageList[3*i].Story,imageList[3*i].Title,imageList[3*i].imageUrl,imageList[3*i].author)" class="t">

@@ -137,8 +137,8 @@ body{
 }
 .flip-card-inner {
   position: relative;
-  width: 450px;
-  height: 250px;
+  width: 400px;
+  height: 200px;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -151,8 +151,8 @@ body{
 
 .flip-card-front, .flip-card-back {
   position: absolute;
-  width: 450px;
-  height: 250px;
+  width: 400px;
+  height: 200px;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }

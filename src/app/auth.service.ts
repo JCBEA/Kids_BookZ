@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth} from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
-
+import { canActivate, redirectLoggedInTo, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+    authInfo$: any;
 
   constructor(private fireauth: AngularFireAuth, private router: Router) {}
 

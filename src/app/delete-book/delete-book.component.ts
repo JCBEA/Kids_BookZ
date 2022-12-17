@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Database, ref, set, update, remove} from '@angular/fire/database';
 import { ImageService } from 'src/app/shared/image.service';
 import { NgConfirmService } from 'ng-confirm-box';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-delete-book',
@@ -26,14 +27,23 @@ export class DeleteBookComponent implements OnInit {
   }
 
   registerUser(value: any){
-    this.confirmService.showConfirm("Are you sure want to Delete?",
+
+    this.confirmService.showConfirm("WANT TO DELETE???????????????",
      () => {
       remove(ref(this.database, 'bookDetails/' + value));
-    alert('---BOOK DELETED Successfuly---');
+      Swal.fire({    
+        title: 'Book Successfuly Deleted',
+        icon:'success',
+        color: 'black',
+        confirmButtonText: 'Done',
+        position: 'top-right'
+    })
     },
+
     () => {
       //cancel
-    })
+    }
+    )
   }
     
   

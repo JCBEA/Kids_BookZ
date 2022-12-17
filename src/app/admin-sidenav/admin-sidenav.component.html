@@ -18,33 +18,41 @@
     </div>
       <ul class="nav-links">
         <li>
-          <a href="#">
+          <a >
             <i class='bx bxs-home'></i>
-            <a routerLink="/admin-page">Home</a>
+            <a routerLink="/admin-page" style="cursor: pointer;">Home</a>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a>
             <i class='bx bxs-book-add'></i>
-            <a routerLink="/Books/upload">Add Books</a>
+            <a routerLink="/Books/upload" style="cursor: pointer;">Add Books</a>
           </a>
         </li>
         <li>
-          <a href="#">
+
+          <a>
+
             <i class='bx bxs-trash-alt'></i>
-            <a routerLink="/delete-book">Delete</a>
+            <a routerLink="/delete-book" style="cursor: pointer;">Delete</a>
           </a>
         </li>
         <li>
-          <a href="#">
+          <a >
             <i class='bx bx-reset'></i>
-            <a routerLink="/update-pass">Reset Password</a>
+            <a routerLink="/update-pass" style="cursor: pointer;">Reset Password</a>
+          </a>
+        </li>
+        <li>
+          <a>
+            <i class='bx bxs-comment'></i>
+            <a routerLink="/comments" style="cursor: pointer;">Comments</a>
           </a>
         </li>
         <li class="log_out">
-          <a href="#">
+          <a>
             <i class='bx bx-log-out'></i>
-            <a (click)="signOut()">Log out</a>
+            <a (click)="signOut()" style="cursor: pointer;">Log out</a>
           </a>
         </li>
       </ul>
@@ -54,6 +62,8 @@
       <div class="sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
         <span class="dashboard">Dashboard</span>
+        <span *ngIf="(afAuth.user | async)" class="add">Hi!, Admin</span>
+        <span *ngIf="!(afAuth.user | async)" class="add">Admin, logged Out</span>
       </div>
     </nav>
   </section>

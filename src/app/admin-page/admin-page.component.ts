@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Database, ref, set} from '@angular/fire/database';
 import { Auth, createUserWithEmailAndPassword, linkWithRedirect, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 @Component({
   selector: 'app-admin-page',
@@ -10,8 +11,7 @@ import { Router } from '@angular/router';
 })
 export class AdminPageComponent implements OnInit {
 
-  constructor() {
-  }
+  constructor(public afAuth: AngularFireAuth) { }
   ngOnInit(): void {
   }
 

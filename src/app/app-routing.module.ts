@@ -22,31 +22,33 @@ import { WebCommentsComponent } from './web-comments/web-comments.component';
 import { CategoryFableComponent } from './Books/category-fable/category-fable.component';
 import { DonateComponent } from './donate/donate.component';
 import { VtoonsComponent } from './vtoons/vtoons.component';
+import { canActivate, redirectLoggedInTo, redirectUnauthorizedTo } from '@angular/fire/auth-guard';
 
+const adminLogin = () => redirectUnauthorizedTo(['admin-login']);
 
 const routes: Routes = [
   { path: '', redirectTo: 'user-direct', pathMatch: 'full' },
   {path:'Books', component: BooksComponent,children:[
-    {path:'upload', component: AddBookComponent},
+    {path:'upload', component: AddBookComponent, ...canActivate(adminLogin)},
     {path:'list', component: BookListComponent},
     {path:'fable', component: CategoryFableComponent},
   ]},
 
   {path: 'dashboard', component: DashboardComponent},
   {path: 'admin-login', component: AdminLoginComponent},
-  {path: 'admin-page', component: AdminPageComponent},
+  {path: 'admin-page', component: AdminPageComponent, ...canActivate(adminLogin)},
   {path: 'contact-us', component: ContactUsComponent},
-  {path: 'update-pass', component: UpdatePassComponent},
-  {path: 'verify-email', component: VerifyEmailComponent},
+  {path: 'update-pass', component: UpdatePassComponent, ...canActivate(adminLogin)},
+  {path: 'verify-email', component: VerifyEmailComponent, ...canActivate(adminLogin)},
   
 
   { path:'user-direct', component: UserDirectComponent},
   { path: '',redirectTo:'user-direct', pathMatch:'full'},
-  { path:'comments', component: WebCommentsComponent},
+  { path:'comments', component: WebCommentsComponent, ...canActivate(adminLogin)},
 
   {path:'user-direct', component: UserDirectComponent},
   {path: 'about-us', component: AboutUsComponent},
-  {path: 'delete-book', component: DeleteBookComponent},
+  {path: 'delete-book', component: DeleteBookComponent, ...canActivate(adminLogin)},
   {path: 'donate', component:DonateComponent},
   {path: 'toons', component:VtoonsComponent},
 ];

@@ -250,6 +250,8 @@ img {
 /* video container startrs here  */
 
 .video-container {
+    overflow-y:auto;
+    margin-top: -2%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 18px;
@@ -257,6 +259,10 @@ img {
     background-color: #181818;
     overflow-y: scroll;
     height: calc(100vh - 116px);
+    max-width: 100vw;
+    max-height: 100vh;
+    height: 200%;
+    width: 500%;
 }
 
 .video-content-cover {
@@ -469,17 +475,3 @@ img {
         display: none;
     }
 }
-.body{
-    background: linear-gradient(to right, #b92b27, #1565c0);
-}
-.content{
-    position:absolute;
-    margin-top: 10%;
-    padding-left: 15%;
-}
-@media all and (max-width: 50px) {
-    .content {
-      /* On small screens, we are no longer using row direction but column */
-      flex-direction: column;
-    }
-  }

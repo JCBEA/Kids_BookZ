@@ -30,7 +30,7 @@ export class AuthService {
 signup(email : string, password: string): void{
   this.fireauth.createUserWithEmailAndPassword(email,password).then ( (res) => {
    alert('Sing Up Successful')
-
+    
    this.emailVerify(res.user)
   }, err => {
     alert(err.message);

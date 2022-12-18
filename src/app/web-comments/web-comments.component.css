@@ -66,7 +66,7 @@
   .time-right:hover{
     height: 33px;
     width: 33px;
-    margin-right: 5px;
+    color: red;
   }
   
   .time-left {
